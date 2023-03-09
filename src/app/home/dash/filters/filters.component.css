@@ -1,0 +1,23 @@
+.mat-mdc-text-field-wrapper{
+    width: 75%;
+    height: 4vh;
+    padding: 0 1vh;
+    margin: 0;
+}
+
+.mat-icon{
+    color: gray;
+}
+.mat-mdc-form-field-flex{
+    margin: 5px 0 0 0;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.mat-mdc-select-value-text {
+    color: black;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}

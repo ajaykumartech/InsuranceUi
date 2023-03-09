@@ -1,0 +1,33 @@
+<div class="graph-card">
+  <div >
+    <h2>{{data.Title}}</h2>
+  </div>
+  <div class="filters">
+<!--               Filter1                    -->
+  <mat-form-field appearance="outline"style="width: 150px;margin-right: -2vh">
+      <mat-icon matTextPrefix style="vertical-align: middle;padding-right: 5px;">filter_list</mat-icon>
+      <mat-select placeholder="Self" (selectionChange)="getselectedValue1($event.value)" [(ngModel)]="data.Filter1Selected">
+        <mat-option *ngFor="let filter of data.Filter1" [value]="filter" >
+          {{filter}}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+<!--               Filter2                    -->
+  <app-filters  [list]="list" [list2]="filter2"(shareCheckedList)="shareCheckedList($event)"> </app-filters>
+
+<!--               Filter3                    -->
+  <mat-form-field appearance="outline"style="width: 150px;">
+      <mat-select placeholder="Select" (selectionChange)="getselectedValue3($event.value)" [(ngModel)]="data.Filter3Selected">
+        <mat-option *ngFor="let filter of data.Filter3" [value]="filter" >
+          {{filter}}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  </div>
+</div>
+
+<div id="divChart">
+  <canvas id="myChart"></canvas>
+</div>

@@ -1,0 +1,138 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+mat-card-title{
+   font-weight: 500;
+}
+.second-card{
+   height: 380px;
+   margin-right: 0.6em;
+   margin-bottom:0.2em;
+   padding: 15px;
+}
+
+ h1{
+   padding-top:10px;
+   margin: 0;
+   font-weight: bold;
+ }
+
+.mat-header{
+   display: flex;
+   justify-content: space-between;
+   padding:10px;
+   width:auto;
+}
+
+.secondcard-div{
+   display: flex;
+}
+.secondcard1-div{
+  width: 100%;
+  justify-content: space-between;
+  height:auto;
+}
+
+.workflow-div{
+   display: flex;
+   width:auto;
+   margin-right:5em;
+   margin-top: -1vh;
+}
+@media only screen and (min-width: 480px)and (max-width:768px) {
+
+ .second-card{
+    height:auto;
+ }
+.mat-header{
+ display: flex;
+}
+.workflow-div{
+ display: inline-flex;
+ width:auto;
+ margin-right:25px;
+}
+.button-stoked{
+ float: right; 
+ margin-left: 8em;
+}
+}
+
+@media only screen and (min-width: 280px)and (max-width:480px) {
+
+   .second-card{
+      height:auto;
+      width:auto;
+   }
+  .mat-header{
+   display: flex;
+  }
+  .workflow-div{
+   display: inline-flex;
+   width:auto;
+   margin-right:5px;
+  }
+  .button-stoked{
+   float: right; 
+   margin-left: 5px;
+   width:150px;
+  }
+  .secondcard-div{
+   display: flex;
+  padding:5px;
+}
+.secondcard1-div{
+  width: 100%;
+  justify-content: space-between;
+  margin:0px 10px;
+  height:auto;
+}
+  }
+
+@media only screen and (min-width: 768px)and (max-width:1024px) {
+
+ .second-card{
+    height:auto;
+ }
+.mat-header{
+ display: flex;
+}
+.workflow-div{
+ display: inline-flex;
+ width:auto;
+ margin-right:25px;
+}
+.button-stoked{
+ float: right; 
+ margin-left: 5em;
+}
+.secondcard-div{
+ display: flow-root;
+padding:5px;
+}
+
+}
+
+@media only screen and (min-width: 1024px)and (max-width:1400px) {
+
+ .second-card{
+    height:auto;
+ } 
+.mat-header{
+ display: flex;
+}
+.workflow-div{
+ display: inline-flex;
+ width:auto;
+ margin-right:25px;
+}
+.button-stoked{
+ float: right; 
+ margin-left: 5em;
+}
+.secondcard-div{
+ display: inline-flexbox;
+padding:5px;
+}
+
+}
