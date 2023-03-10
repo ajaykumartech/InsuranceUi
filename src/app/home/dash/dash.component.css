@@ -10,7 +10,10 @@
     justify-content:space-between;
  }
 
-
+.sea-pro{
+   display: flex;
+   justify-content: space-between;
+}
  .sidenav-subtitle{
     color: #585757; 
     margin-left: 10px; 
@@ -50,7 +53,16 @@
    .opening{
       display: flow-root;
    }
+
+   .sea-pro{
+      display: flow-root;
+     margin-left:5px;
+   }
    
+  
+   .prof{
+    margin-left:25px;
+   }
     .search{
       height:32px; 
       width:250px; 
@@ -117,6 +129,7 @@
   /* screen for tablets and ipad */
  @media only screen and (min-width: 480px)and (max-width:768px) {
   
+
    .error_find{
       color: red;font-size: large;margin-top: 15%;margin-left: 5%;
    }
@@ -199,6 +212,7 @@
     }
    .row{
    display:flow-root;
+   height:auto;
   } 
 .col1{
    margin:5px;
@@ -249,6 +263,7 @@
     }
    .row{
    display:flow-root;
+   height:auto;
   } 
 
 .col{
@@ -300,16 +315,15 @@
     }
    .row{
    display:flex;
+   height:auto;
   } 
-.col1{
+
+.col{
    margin:5px;
-}
-.col2{
-   margin:5px;
-   width:auto;
+   height:auto;
 }
 .commission{
-   display:flexbox; 
+   display:flex-box; 
    width:auto;
    height:auto;
    padding:5px;

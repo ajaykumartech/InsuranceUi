@@ -5,7 +5,7 @@
 
 .third-card{
   margin-bottom:0.2em;
-  height: 380px;
+  height: 550px;
   padding: 10px;
 }
 .mat-header{
@@ -69,17 +69,13 @@ div[role="progressbar"]::before {
 
 .row{
 display:flow-root;
+height:auto;
 } 
-.col1{
-color:red; 
-
+.col{ 
+height:auto;
 margin:5px;
 }
-.col2{
-color:red; 
 
-margin:5px;
-}
 .third-card{
 width: auto;
 height: auto;
@@ -105,13 +101,13 @@ width:auto;
 
 .row{
 display:flow-root;
+height:auto;
 } 
 .col{
 margin:5px;
+height:auto;
 }
-.col{
-margin:5px;
-}
+
 .third-card{
 width: auto;
 height: auto;
@@ -131,20 +127,21 @@ margin-left: 12em;
 
 .row{
   display:flow-root;
+  height:auto;
  } 
 .col{
   margin:5px;
+  height:auto;
 }
-.col{
-  margin:5px;
-}
+
 .third-card{
   width: auto;
-  height: auto;
+  height: 100%;
 }
 .mat-header{
   display: flex;
   justify-content: space-between;
+
 }
 .button-stoked{
   float: right; 
@@ -156,24 +153,21 @@ margin-left: 12em;
 
   .row{
   display:flow-root;
+  height:auto;
   } 
-  .col1{
-  color:red; 
-  
+  .col{
+  height:auto;
   margin:5px;
   }
-  .col2{
-  color:red; 
-  
-  margin:5px;
-  }
+ 
   .third-card{
   width: auto;
-  height: auto;
+  height: 100%;
   }
   .mat-header{
   display: flex;
   justify-content: space-between;
+  height:auto;
   }
   .button-stoked{
   float: right; 
@@ -192,16 +186,11 @@ margin-left: 12em;
   .row{
   display:flow-root;
   } 
-  .col1{
-  color:red; 
-  
+  .col{
+  height:auto;
   margin:5px;
   }
-  .col2{
-  color:red; 
-  
-  margin:5px;
-  }
+ 
   .third-card{
   width: auto;
   height: auto;
