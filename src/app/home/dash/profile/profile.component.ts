@@ -14,6 +14,111 @@ export class ProfileComponent {
   profileImage:any
   notificationCount = 0
   data:any
+
+
+
+  notificationItems = [
+    {
+      title: 'New message',
+      message: 'You have a new message from John Doe.loremipsum You have a new message from John Doe.loremipsum You have a new message from John Doe.loremipsum You have a new message from John Doe.loremipsum',
+      icon: 'email'
+    },
+    {
+      title: 'Connection request',
+      message: 'John Smith wants to connect with you.',
+      icon: 'person_add'
+    },
+    {
+      title: 'New job posting',
+      message: 'There is a new job posting that might interest you.',
+      icon: 'work'
+    },
+    {
+      title: 'New message',
+      message: 'You have a new message from John Doe.loremipsum',
+      icon: 'email'
+    },
+    {
+      title: 'Connection request',
+      message: 'John Smith wants to connect with you.',
+      icon: 'person_add'
+    },
+    {
+      title: 'New job posting',
+      message: 'There is a new job posting that might interest you.',
+      icon: 'work'
+    },
+    {
+      title: 'New message',
+      message: 'You have a new message from John Doe.loremipsum',
+      icon: 'email'
+    },
+    {
+      title: 'Connection request',
+      message: 'John Smith wants to connect with you.',
+      icon: 'person_add'
+    },
+    {
+      title: 'New job posting',
+      message: 'There is a new job posting that might interest you.',
+      icon: 'work'
+    },
+    {
+      title: 'Connection request',
+      message: 'John Smith wants to connect with you.',
+      icon: 'person_add'
+    },
+    {
+      title: 'New job posting',
+      message: 'There is a new job posting that might interest you.',
+      icon: 'work'
+    },
+    {
+      title: 'New message',
+      message: 'You have a new message from John Doe.loremipsum',
+      icon: 'email'
+    },
+    {
+      title: 'Connection request',
+      message: 'John Smith wants to connect with you.',
+      icon: 'person_add'
+    },
+    {
+      title: 'New job posting',
+      message: 'There is a new job posting that might interest you.',
+      icon: 'work'
+    },
+    {
+      title: 'Connection request',
+      message: 'John Smith wants to connect with you.',
+      icon: 'person_add'
+    },
+    {
+      title: 'New job posting',
+      message: 'There is a new job posting that might interest you.',
+      icon: 'work'
+    },
+    {
+      title: 'New message',
+      message: 'You have a new message from John Doe.loremipsum',
+      icon: 'email'
+    },
+    {
+      title: 'Connection request',
+      message: 'John Smith wants to connect with you.',
+      icon: 'person_add'
+    },
+    {
+      title: 'New job posting',
+      message: 'There is a new job posting that might interest you.',
+      icon: 'work'
+    }
+
+  ];
+
+
+
+  
   constructor(private service: UserenvironmentsService,private route:Router) {}
   
   

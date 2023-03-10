@@ -12,3 +12,26 @@ mat-raised-button{
      .demo-section + .demo-section {
        margin-top: 16px;
      }
+
+
+     .notification-content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+   
+    }
+    .notification-title {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .notification-message {
+      font-size: 12px;
+    }
+    .notification-message:hover {
+      background-color: #f02929;
+    }
+
+    .notification-icon  :hover {
+      background-color: #f02929;
+      color:blueviolet
+    }

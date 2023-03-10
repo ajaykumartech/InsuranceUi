@@ -16,11 +16,14 @@
 }
 
 .sidenav-container {
-    height: auto;
+    height: auto; 
   }
   
   .sidenav {
     width: 300px;
+    border-radius: 5px;
+    margin:10px 10px 10px 0px;
+   
   }
   
   .sidenav .mat-toolbar {

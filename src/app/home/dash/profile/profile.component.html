@@ -1,5 +1,17 @@
 <div style="margin:20px 20px 10px 0px;float: right;" *ngIf="dashboardData">
-  <i [matBadge]="notificationCount" class="fas fa-bell" matBadgeSize="small" matBadgeColor="warn"style="vertical-align: middle;font-size:20px;color:gray;background-color: rgb(255, 255, 255);"></i>
+  <i  [matMenuTriggerFor]="notificationMenu"[matBadge]="notificationCount" class="fas fa-bell" matBadgeSize="small" matBadgeColor="warn"style="vertical-align: middle;font-size:20px;color:gray;background-color: rgb(255, 255, 255);"></i>
+  
+  <mat-menu #notificationMenu="matMenu">
+    <div *ngFor="let item of notificationItems">
+      <button mat-menu-item>
+        <mat-icon class="notification-icon">{{item.icon}}</mat-icon>
+        <div class="notification-content">
+          <div class="notification-title">{{item.title}}</div>
+          <div class="notification-message">{{item.message}}</div>
+        </div>
+      </button>
+    </div>
+  </mat-menu>
 
   <span *ngIf="profileImage != null; else other"><img [src]="profileImage" width="25" style="border-radius: 28px;vertical-align: middle;margin:0px 15px;color:gray;background-color: rgb(255, 255, 255);" /></span>
     <ng-template #other>
