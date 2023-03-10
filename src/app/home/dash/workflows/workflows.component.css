@@ -68,10 +68,11 @@ mat-card-title{
    display: flex;
   }
   .workflow-div{
-   display: inline-flex;
+   display: flex;
    width:auto;
-   margin-right:5px;
-  }
+   margin-right:1em;
+   margin-top: -1vh;
+}
   .button-stoked{
    float: right; 
    margin-left: 5px;

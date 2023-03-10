@@ -34,6 +34,10 @@
   float: right;   
 }
 
+
+
+
+
 .mat-mdc-text-field-wrapper{
   width: 75%;
   height: 4vh;
@@ -57,6 +61,10 @@
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
 
 ::ng-deep .mat-form-field {
    padding: 0.1em 0px !important;
@@ -96,6 +104,32 @@
   display:flow-root;
   justify-content: space-between;
 }
+.mat-mdc-text-field-wrapper{
+  width: 75%;
+  height: 4vh;
+  padding: 0 1vh;
+  margin: 0;
+}
+
+.mat-icon{
+  color: gray;
+}
+.mat-mdc-form-field-flex{
+  margin: 5px 0 0 0;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mat-mdc-select-value-text {
+  color: black;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
  }
     /* screen for mobiles */
  @media only screen and (min-width: 480px)and (max-width:768px) {
