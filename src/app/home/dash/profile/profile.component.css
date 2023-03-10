@@ -16,8 +16,9 @@ mat-raised-button{
 
      .notification-content {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       margin-left: 8px;
+      color: gray;
    
     }
     .notification-title {
@@ -27,11 +28,22 @@ mat-raised-button{
     .notification-message {
       font-size: 12px;
     }
-    .notification-message:hover {
-      background-color: #f02929;
+
+    .notification-icon{
+     color:rgb(105, 102, 102);
+     padding-right:15px;
+     
     }
 
-    .notification-icon  :hover {
-      background-color: #f02929;
-      color:blueviolet
+    .custom-menu{
+       width: 400px;
+    }
+
+    .sidee{
+      opacity: 0.8;
+      color: black;
+      font-weight: bold;
+    }
+    .sicon{
+      color:red;
     }

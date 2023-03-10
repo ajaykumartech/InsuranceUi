@@ -1,7 +1,9 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UserenvironmentsService } from 'src/app/userenvironments.service';
+import { DialogComponent } from '../../dialog/dialog.component';
 
 @Component({
   selector: 'app-profile',
@@ -14,139 +16,62 @@ export class ProfileComponent {
   profileImage:any
   notificationCount = 0
   data:any
-
-
-
-  notificationItems = [
-    {
-      title: 'New message',
-      message: 'You have a new message from John Doe.loremipsum You have a new message from John Doe.loremipsum You have a new message from John Doe.loremipsum You have a new message from John Doe.loremipsum',
-      icon: 'email'
-    },
-    {
-      title: 'Connection request',
-      message: 'John Smith wants to connect with you.',
-      icon: 'person_add'
-    },
-    {
-      title: 'New job posting',
-      message: 'There is a new job posting that might interest you.',
-      icon: 'work'
-    },
-    {
-      title: 'New message',
-      message: 'You have a new message from John Doe.loremipsum',
-      icon: 'email'
-    },
-    {
-      title: 'Connection request',
-      message: 'John Smith wants to connect with you.',
-      icon: 'person_add'
-    },
-    {
-      title: 'New job posting',
-      message: 'There is a new job posting that might interest you.',
-      icon: 'work'
-    },
-    {
-      title: 'New message',
-      message: 'You have a new message from John Doe.loremipsum',
-      icon: 'email'
-    },
-    {
-      title: 'Connection request',
-      message: 'John Smith wants to connect with you.',
-      icon: 'person_add'
-    },
-    {
-      title: 'New job posting',
-      message: 'There is a new job posting that might interest you.',
-      icon: 'work'
-    },
-    {
-      title: 'Connection request',
-      message: 'John Smith wants to connect with you.',
-      icon: 'person_add'
-    },
-    {
-      title: 'New job posting',
-      message: 'There is a new job posting that might interest you.',
-      icon: 'work'
-    },
-    {
-      title: 'New message',
-      message: 'You have a new message from John Doe.loremipsum',
-      icon: 'email'
-    },
-    {
-      title: 'Connection request',
-      message: 'John Smith wants to connect with you.',
-      icon: 'person_add'
-    },
-    {
-      title: 'New job posting',
-      message: 'There is a new job posting that might interest you.',
-      icon: 'work'
-    },
-    {
-      title: 'Connection request',
-      message: 'John Smith wants to connect with you.',
-      icon: 'person_add'
-    },
-    {
-      title: 'New job posting',
-      message: 'There is a new job posting that might interest you.',
-      icon: 'work'
-    },
-    {
-      title: 'New message',
-      message: 'You have a new message from John Doe.loremipsum',
-      icon: 'email'
-    },
-    {
-      title: 'Connection request',
-      message: 'John Smith wants to connect with you.',
-      icon: 'person_add'
-    },
-    {
-      title: 'New job posting',
-      message: 'There is a new job posting that might interest you.',
-      icon: 'work'
-    }
-
-  ];
-
+  notificationItems:any 
+  token:any
 
 
   
-  constructor(private service: UserenvironmentsService,private route:Router) {}
+  constructor(private service: UserenvironmentsService,private route:Router, public dialog: MatDialog) {}
   
   
   ngOnInit(){
-    var token = localStorage.getItem('Token')
-    this.service.getDashboardData(token).subscribe(response => {
+    this.token = localStorage.getItem('Token')
+    this.service.getDashboardData(this.token).subscribe(response => {
       this.dashboardData = response
+      
     })
-    this.service.getProfilePic(token).subscribe(response => {
+    this.service.getProfilePic(this.token).subscribe(response => {
+    
       this.profile = response
       this.profileImage = this.profile.ClientUser.profileIconBase64
+     
     })
-    // this.service.getNotificationCount(token).subscribe(response => {
-    //   this.NotificationCount = response
-    // })
+     this.service.getNotificationCount(this.token).subscribe(response => {
+       
+      console.log("fffff")
+      
+     })
 
-    this.service.getNotificationCount(token).subscribe(response => {
+    this.service.getNotificationCount(this.token).subscribe(response => {
       this.data = response
       for(var i=0;i<this.data.length;i++){
         if(this.data[i].state == 0)
           this.notificationCount +=1
       }
+      console.log(this.notificationItems=this.data)
     })
   }
 
   signout(){
      localStorage.removeItem('Token')
      this.route.navigate([''])
+  }
+
+  viewdata(data:any,id:any){
+    var body = {
+      "NotificationId":id,
+      "State":1
+    }
+    this.service.changeNotificationState(body,this.token).subscribe(res => {
+      console.log(res)
+    })
+    const dialogRef = this.dialog.open(DialogComponent,{data:data});
+    dialogRef.afterClosed().subscribe(result => {
+      window.location.reload()
+
+    });
+
+
   }
   
 }

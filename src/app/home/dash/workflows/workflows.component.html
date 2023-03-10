@@ -20,7 +20,7 @@
   
           <ng-template #other>
             <div style="color: white; border:none; border-radius: 10px; height: 25px;width:40px">
-              <button  [matTooltip]="data.Count" matTooltipPosition="left" style="background-color: #969696; color: white; border:none; border-radius: 10px; height: 25px;width:auto" >{{data.Count[0]}}{{data.Count[1]}}{{data.Count[2]}}..</button>
+              <button  [matTooltip]="data.Count" matTooltipPosition="left" style="background-color: #969696; color: white; border:none; border-radius: 10px; height: 25px;width:auto" >{{data.Count.slice(0,3)}}..</button>
             </div>
           </ng-template>
   

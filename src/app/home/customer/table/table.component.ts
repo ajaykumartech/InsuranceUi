@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, Input, ViewChild, ViewEncapsulation} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { UserenvironmentsService } from 'src/app/userenvironments.service';
@@ -70,7 +70,8 @@ const ELEMENT_DATA= new MatTableDataSource<PeriodicElement>([
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  styleUrls: ['./table.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 

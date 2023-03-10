@@ -65,12 +65,12 @@ mat-card-title{
       width:auto;
    }
   .mat-header{
-   display: flex;
+   display: flow-root;
   }
   .workflow-div{
    display: flex;
    width:auto;
-   margin-right:1em;
+   margin-right:-2vh;
    margin-top: -1vh;
 }
   .button-stoked{
@@ -79,7 +79,7 @@ mat-card-title{
    width:150px;
   }
   .secondcard-div{
-   display: flex;
+   display: flow-root;
   padding:5px;
 }
 .secondcard1-div{

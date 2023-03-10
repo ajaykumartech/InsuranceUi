@@ -1,115 +1,16 @@
-<div>
 
-  <!-- <div  style="margin:20px 0px 10px 0px;">
-    <input class="search" type="text" name="search" [(ngModel)]="search" placeholder="&#128269; Search">
-    <button mat-raised-button style="margin:5px 5px;background-color: #0085FF;color: white;" (click)="callapi()">Search</button>
-
-     <mat-icon>search</mat-icon> 
-  </div> -->
-
+<!--                Search                 -->
+<div style="display: flex;">
   <div>
-    <mat-form-field appearance="outline" style="width: 50vw;">
-      <input type="text" matInput placeholder="Search" [(ngModel)]="search">
-
-    </mat-form-field>
-    <button mat-raised-button style="margin:5px 5px;background-color: #0085FF;color: white;"
-      (click)="callapi()">Search</button>
-
-
-  </div>
-</div>
-<div style="display:flex;">
-  <div style="font-size: 12px;">
-    <mat-form-field appearance="outline" style="width: 120px;margin-left: 0.1vh">
-      <div style="padding: 0;display: flex;">
-        <mat-select placeholder="Policy" (selectionChange)="getselectedValue3($event.value)"
-          [(ngModel)]="Filter3Selected">
-          <mat-option *ngFor="let filter of Filter3" [value]="filter">
-            {{filter}}
-          </mat-option>
-        </mat-select>
-      </div>
+    <mat-form-field appearance="outline" style="width:50svw;margin-right: -8lvw;">
+      <mat-icon matPrefix style="font-size: 22px;">search</mat-icon>
+      <input matInput type="search" placeholder="Search" [(ngModel)]="search" >
     </mat-form-field>
   </div>
-  <div style="font-size: 12px;">
-    <mat-form-field appearance="outline" style="width: 120px;margin-right: 30px">
-      <div style="padding: 0;display: flex;">
-        <mat-select placeholder="Active" (selectionChange)="getselectedValue3($event.value)"
-          [(ngModel)]="Filter3Selected">
-          <mat-option *ngFor="let filter of Filter3" [value]="filter">
-            {{filter}}
-          </mat-option>
-        </mat-select>
-      </div>
-    </mat-form-field>
-  </div>
-  <div style="font-size: 12px;">
-    <mat-form-field appearance="outline" style="width: 120px;margin-right: vh">
-      <div style="padding: 0;display: flex;">
-        <mat-select placeholder="Customer" (selectionChange)="getselectedValue3($event.value)"
-          [(ngModel)]="Filter3Selected">
-          <mat-option *ngFor="let filter of Filter3" [value]="filter">
-            {{filter}}
-          </mat-option>
-        </mat-select>
-      </div>
-    </mat-form-field>
-  </div>
-
-  <div style="font-size: 12px;">
-    <mat-form-field appearance="outline" style="width: 250px;margin-left: 0.1vh">
-      <div style="padding: 0;display: flex;">
-        <mat-select placeholder="Customer - First/LastName" (selectionChange)="getselectedValue3($event.value)"
-          [(ngModel)]="Filter3Selected">
-          <mat-option *ngFor="let filter of Filter3" [value]="filter">
-            {{filter}}
-          </mat-option>
-        </mat-select>
-      </div>
-    </mat-form-field>
-  </div>
-
-  <div style="font-size: 12px;">
-    <mat-form-field appearance="outline" style="width: 150px;margin-left: 0.1vh">
-      <div style="padding: 0;display: flex;">
-        <mat-select placeholder="X-Reference" (selectionChange)="getselectedValue3($event.value)"
-          [(ngModel)]="Filter3Selected">
-          <mat-option *ngFor="let filter of Filter3" [value]="filter">
-            {{filter}}
-          </mat-option>
-        </mat-select>
-      </div>
-    </mat-form-field>
-  </div>
-
-  
-  <div style="font-size: 12px;">
-    <mat-form-field appearance="outline" style="width: 120px;margin-left: 0.1vh">
-      <div style="padding: 0;display: flex;">
-        <mat-select placeholder="Agency" (selectionChange)="getselectedValue3($event.value)"
-          [(ngModel)]="Filter3Selected">
-          <mat-option *ngFor="let filter of Filter3" [value]="filter">
-            {{filter}}
-          </mat-option>
-        </mat-select>
-      </div>
-    </mat-form-field>
-  </div>
-  
-  <div style="font-size: 12px;">
-    <mat-form-field appearance="outline" style="width: 120px;margin-left: 0.1vh">
-      <div style="padding: 0;display: flex;">
-        <mat-select placeholder="Filters" (selectionChange)="getselectedValue3($event.value)"
-          [(ngModel)]="Filter3Selected">
-          <mat-option *ngFor="let filter of Filter3" [value]="filter">
-            {{filter}}
-          </mat-option>
-        </mat-select>
-      </div>
-    </mat-form-field>
-  </div>
+    <button mat-raised-button (click)="callapi()" style="background-color: #0085FF;color: white;margin-top: -2px;">Search</button>
 </div>
 
+ 
 
 <div class="mat-elevation-z8">
   <div style="height: 49vh;">

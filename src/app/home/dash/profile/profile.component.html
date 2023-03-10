@@ -2,12 +2,16 @@
   <i  [matMenuTriggerFor]="notificationMenu"[matBadge]="notificationCount" class="fas fa-bell" matBadgeSize="small" matBadgeColor="warn"style="vertical-align: middle;font-size:20px;color:gray;background-color: rgb(255, 255, 255);"></i>
   
   <mat-menu #notificationMenu="matMenu">
+    <mat-card-title style="text-align: center;background-color: black;color:#fff;padding:0px;margin:0px;">Notifications</mat-card-title>
     <div *ngFor="let item of notificationItems">
-      <button mat-menu-item>
-        <mat-icon class="notification-icon">{{item.icon}}</mat-icon>
-        <div class="notification-content">
-          <div class="notification-title">{{item.title}}</div>
-          <div class="notification-message">{{item.message}}</div>
+      <button mat-menu-item >
+        <mat-icon panelClass="custom-menu" class="notification-icon">message</mat-icon>
+        <div class="notification-content" [ngClass]="{'sidee':item.state == '0'}">
+         
+          <div class="notification-message"  (click)="viewdata(item.message,item.id)" *ngIf="item.message.length<30;else other">{{item.message}}<mat-icon  [ngClass]="{'sicon':item.state == '0'}" style="float:right;">fiber_manual_record</mat-icon></div>
+          <ng-template #other>
+            <div class="notification-message"  (click)="viewdata(item.message,item.id)" >{{item.message.slice(0,30)}}...................<mat-icon   [ngClass]="{'sicon':item.state == '0'}" style="float:right;">fiber_manual_record</mat-icon></div>
+          </ng-template>
         </div>
       </button>
     </div>

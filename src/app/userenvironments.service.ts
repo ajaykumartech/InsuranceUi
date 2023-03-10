@@ -128,6 +128,12 @@ export class UserenvironmentsService {
       Headers = Headers.set('Authorization', token)
       return this.http.get(this.url2 + 'getnotifications', {headers: Headers}) 
     }
+
+    changeNotificationState(body:any,token:any){
+      let Headers = new HttpHeaders();
+      Headers = Headers.set('Authorization', token)
+      return this.http.post(this.url2+ 'changenotificationstate', body, {headers: Headers})
+    }
     
   //customer page
 
