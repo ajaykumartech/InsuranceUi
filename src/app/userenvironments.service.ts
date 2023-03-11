@@ -15,8 +15,7 @@ export class UserenvironmentsService {
    APIURL = "https://insurance-api01.suvamglobal.com/master/"
    url2='https://insurance-api01.suvamglobal.com/domain/'
    DATAURL = 'http://localhost:8000/posts'
-
-
+  
 
    callService(val:string): Observable<any>{
       return this.http.get(this.APIURL + 'serverstatus') 
@@ -148,6 +147,26 @@ export class UserenvironmentsService {
     var body = data
     var headers = new HttpHeaders().set('Authorization', token )
     return this.http.post(this.url2 + 'searchcustomer' , body , {'headers': headers})
+  }
+
+  //customer details  
+   getcustomerDetails(customer:any, token:any){
+    var headers = new HttpHeaders().set('Authorization', token )
+    return this.http.get(this.url2 + 'getcustomerbasicdetails?CUID=' +customer, {'headers': headers})
+   }
+
+   getcustomertable(token:any, cuid:any){
+    var headers = new HttpHeaders().set('Authorization', token)
+    return this.http.get(this.url2 + 'getcustomerspecificdetails?CUID=' +cuid, {'headers': headers})
+   }
+   getcustomertable1(token:any, cuid:any){
+    var headers = new HttpHeaders().set('Authorization', token)
+    return this.http.get("http://localhost:3000/data")
+   }
+
+   getSchema(token:any){ 
+    var headers = new HttpHeaders().set('Authorization', token )
+    return this.http.get(this.url2 + 'getcustomerspecificschema' , {'headers': headers})
    }
 }
 

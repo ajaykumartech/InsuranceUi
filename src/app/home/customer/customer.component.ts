@@ -10,6 +10,7 @@ import { UserenvironmentsService } from 'src/app/userenvironments.service';
 
 
 export class CustomerComponent {
+  customerId:any
   constructor(private userEnvironments: UserenvironmentsService) { }
   data={
     SearchText: "",
@@ -39,6 +40,9 @@ export class CustomerComponent {
 
 
   }
-
+  customername(id:any){
+    this.customerId = id
+    console.log("clientid: ", this.customerId)
+  }
 
 }

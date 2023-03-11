@@ -128,10 +128,11 @@
  }
   /* screen for tablets and ipad */
  @media only screen and (min-width: 480px)and (max-width:768px) {
-  
-
-   .error_find{
-      color: red;font-size: large;margin-top: 15%;margin-left: 5%;
+     .error_find{
+      color: red;
+      font-size: large;
+      margin-top: 15%;
+      margin-left: 5%;
    }
     .search{
       height:32px; 
@@ -141,7 +142,9 @@
     } 
     .graphs{
       width:90%;
-      visibility: none;
+     height:400px;
+     height:auto;
+     margin:0px 0px 0px 10px;
    }
   .row{
    display: flow-root;
@@ -152,36 +155,24 @@
    justify-content:space-between;
 }
 .col{
-  
+
    width: auto;
    height:auto;
 }
-.col{
-  
-   width:auto;
-   height: auto;
-}
+
 .commission{
    display: flow-root; 
    width:90%;
    height:auto;
-   padding:5px;
+   padding:0px;
+   margin-left:0px;
 }
- .graphs{
-   height:auto;
-   width: auto;
-   margin:0px 0px 0px 10px;
-}
-.compol{
-  
-   width:40px;
-   margin:40px 0px 0px 10px;
-}
+
 .coms{
-   margin:0px 0px 0px 10px;
+   margin:0px 0px 0px 0px;
 }
 .poli{
-   margin:0px 0px 0px 10px;
+   margin:0px 0px 0px 0px;
 }
 
 .mat-toolbar{
@@ -192,10 +183,10 @@
    width:95%;
 }
 .compol{
-   float: right;
+   
    width:auto;
    height:auto;
-   margin:15px 0px 5px 0px;
+   margin:5px 0px 15px 0px;
 }
 
  }
@@ -364,7 +355,7 @@
       margin:15px 0px;
    }
    .search{
-      height:1vh; 
+      height:0.5vh; 
       width:400px; 
       border-radius: 5px; 
       margin-right: 20px;
