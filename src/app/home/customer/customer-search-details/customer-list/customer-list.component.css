@@ -1,0 +1,22 @@
+.second-row{
+    margin:2vh 20vh 3vh 0vh;
+    display: flex;
+    border-bottom: 1px solid rgb(208, 208, 208);
+    width:100%;
+}
+.button{
+    border: none;
+    /* padding: 1vh 3vh 1vh 2vh; */
+    font-size: 19px;
+    font-weight: 500!important;
+    color: #323232;
+    background-color: white;
+
+
+}
+@media only screen and (min-width: 428px)and (max-width:768px) {
+    .second-row{
+      width:auto;
+      overflow-x:scroll  
+    }
+}

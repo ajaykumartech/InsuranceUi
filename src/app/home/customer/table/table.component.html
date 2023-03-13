@@ -1,0 +1,65 @@
+
+<!--                Search                 -->
+<div style="display: flex;">
+  <div>
+    <mat-form-field appearance="outline" style="width:50svw;margin-right: -8lvw;">
+      <mat-icon matPrefix style="font-size: 22px;">search</mat-icon>
+      <input matInput type="search" placeholder="Search" [(ngModel)]="search" >
+    </mat-form-field>
+  </div>
+    <button mat-raised-button (click)="callapi()" style="background-color: #0085FF;color: white;margin-top: -2px;">Search</button>
+</div>
+
+ <!--               Filter start                  -->
+
+<div class="filter-class"  *ngIf="schema">
+  <div style="font-size: 12px;" *ngFor="let filter of schema.AvailableFiltersSelected ; let i=index">
+    <mat-form-field appearance="outline" [ngClass]="{'maxwidth':schema[filter+'Selected'][0].length>15}" style="width:150px">
+      <mat-select placeholder="Self" (selectionChange)="getValues($event.value,i)" [(ngModel)]="schema[filter+'Selected'][0]"  >
+        <mat-option *ngFor="let fill of schema[filter]" [value]="fill" >
+         {{fill}} 
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="outline" style="width: 250px;margin-right: -2vh">
+    <mat-icon matTextPrefix style="vertical-align: middle;padding-right: 5px;">filter_list</mat-icon>
+    <mat-select name="filter" multiple (selectionChange)="shareCheckedLis($event.value)" [(ngModel)]="schema.TableSchema.HeadersSelected">
+    <mat-option *ngFor="let topping of schema.TableSchema.HeadersAvailable" [value]="topping" >{{topping}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+</div>
+ <!--               Filter end                   -->
+
+<!-- Table start  -->
+
+
+<div class="mat-elevation-z8" >
+  <div class="res-table" style="height: 49vh;">
+    <table  mat-table [dataSource]="dataSource">
+      <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+        <th mat-header-cell class="custom-mat-header-styling tableHeaderCellDiv" *matHeaderCellDef> <span>{{ column }} </span> </th>
+        <div *ngIf="column!='Name';else other"><td mat-cel *matCellDef="let element"> {{element[column]}} </td></div>
+
+        <ng-template #other>
+          <td [ngClass]="{'roww':column=='Name'}" (click)="onClick($event, element.ClientUserID)" [routerLink]="['customer-search', element.ClientUserID]" mat-cel *matCellDef="let element"> {{element[column]}} </td>
+        </ng-template>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+  <div>
+    Goto <input type="text" [(ngModel)]="manualPage" (ngModelChange)="updateManualPage($event)"
+      style="width: 35px; margin-left: 5px;"> Page
+    <mat-paginator #paginator class="demo-paginator" (page)="handlePageEvent($event)" [pageSize]="1" [pageIndex]='1'
+      aria-label="Select page">
+    </mat-paginator>
+  </div>
+</div>
+
+
+<!-- Table end   -->

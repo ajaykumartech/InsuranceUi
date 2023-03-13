@@ -1,0 +1,42 @@
+<div class="second-row">
+  <div class="policies">
+    <button class="button"   (click)="buttonClick(0)" [ngClass]="{'Policy':this.routerId==0}">Policies</button>
+  </div>
+  <div class="tasks" style="margin-left: 5vh">
+    <button class="button"  (click)="buttonClick(1)" [ngClass]="{'Tasks': this.routerId==1}">Tasks</button>
+  </div>
+  <div class="activities" style="margin-left: 5vh">
+    <button class="button"  (click)="buttonClick(2)" [ngClass]="{'Activities': this.routerId==2}">Activities</button>
+  </div>
+  <div class="limits" style="margin-left: 5vh">
+    <button class="button"   (click)="buttonClick(3)" [ngClass]="{'Limits': this.routerId==3}">Limits</button>
+  </div>
+  <div class="intelligence" style="margin-left: 5vh">
+    <button class="button"  (click)="buttonClick(4)" [ngClass]="{'Intelligence': this.routerId==4}">Intelligence</button>
+  </div>
+  <div class="claims" style="margin-left: 5vh">
+    <button class="button" (click)="buttonClick(5)" [ngClass]="{'Claims': this.routerId==5}">Claims</button>
+  </div>
+</div>
+
+
+<div *ngIf="routerId==0" >
+  <app-policy [customerId]="customerID"></app-policy>
+</div>
+<div *ngIf="routerId==1">
+  <app-tasks-list></app-tasks-list>
+</div>
+<div *ngIf="routerId==2" >
+  <app-activities></app-activities>
+</div>
+<div *ngIf="routerId==3">
+  <app-limits-coverage></app-limits-coverage>
+</div>
+<div *ngIf="routerId==4">
+  <app-intelligence></app-intelligence>
+</div>
+<div *ngIf="routerId==5" >
+  <app-claims></app-claims>
+</div>
+
+

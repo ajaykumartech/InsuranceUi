@@ -1,0 +1,169 @@
+.mat-stroked-button{
+  background-color: #fff;
+  border: none;
+  padding: 2px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  border: 1px solid #ccc;
+  width: auto;
+  text-align: center;
+}
+
+.graph-card{
+  display:flex;
+  justify-content: space-between;
+}
+
+.drop-show select{
+  display:inline-block;
+  font-size:15px;
+  cursor: pointer;
+  padding:5px;
+}
+.drop-show select option{
+  vertical-align: top;
+}
+.my_class{
+  color: red;
+
+}
+
+.filters{
+  display:flex;
+  float: right;   
+}
+
+.mat-mdc-text-field-wrapper{
+  width: 75%;
+  height: 4vh;
+  padding: 0 1vh;
+  margin: 0;
+}
+
+.mat-icon{
+  color: gray;
+}
+.mat-mdc-form-field-flex{
+  margin: 5px 0 0 0;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mat-mdc-select-value-text {
+  color: black;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+::ng-deep .mat-form-field {
+   padding: 0.1em 0px !important;
+   font-size: 12px;
+  }
+  @media only screen and (min-width: 1024px)and (max-width:1200px) {
+    .filters{
+      display:flexbox;
+      float: right; 
+    }
+    .graph-card{
+  display:flow-root;
+  justify-content: space-between;
+}
+  }
+
+
+  @media only screen and (min-width: 1200px)and (max-width:1400px) {
+    .filters{
+      display:flexbox;
+      float: right; 
+    }
+    .graph-card{
+  display:flow-root;
+  justify-content: space-between;
+}
+  }
+
+  @media only screen and (min-width: 768px)and (max-width:1024px) {
+    .filters{
+      display:flow-root;
+      float: right; 
+      margin:0px 10px 0px 10px; 
+    }
+    .graph-card{
+  display:flex;
+  justify-content: space-between;
+}
+.graph-card{
+  display:flow-root;
+  justify-content: space-between;
+}
+  }
+
+   /* screen for mobiles */
+ @media only screen and (min-width: 320px)and (max-width:480px) {
+   .filters{
+      display:flow-root;
+      float: right; 
+      margin:0px 0px 0px 20px; 
+    }
+    .graph-card{
+  display:flow-root;
+  justify-content: space-between;
+}
+.mat-mdc-text-field-wrapper{
+  width: 75%;
+  height: 4vh;
+  padding: 0 1vh;
+  margin: 0;
+}
+
+.mat-icon{
+  color: gray;
+}
+.mat-mdc-form-field-flex{
+  margin: 5px 0 0 0;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mat-mdc-select-value-text {
+  color: black;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+ }
+    /* screen for mobiles */
+ @media only screen and (min-width: 480px)and (max-width:768px) {
+   .filters{
+      display:flow-root;
+      float: right; 
+      margin:0px 0px 0px 50px; 
+    }
+    .graph-card{
+      display:flow-root;
+      justify-content: space-between;
+    }
+ }
+
+  @media only screen and (min-width: 216px)and (max-width:320px) {
+   .filters{
+      display:flow-root;
+      float: right; 
+      margin:0px 0px 0px 50px; 
+    }
+    .graph-card{
+  display:flow-root;
+  justify-content: space-between;
+}
+ }

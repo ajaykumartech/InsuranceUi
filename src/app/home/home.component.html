@@ -1,0 +1,67 @@
+
+<div class="whole"> 
+
+
+  <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #drawer class="sidenav" fixedInViewport
+          [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+          [mode]="(isHandset$ | async) ? 'over' : 'side'"
+          [opened]="(isHandset$ | async) === false">
+        <mat-toolbar>
+          <div class="toolbar">
+            <img src="https://i.ibb.co/fD60zpT/Screenshot-2023-01-27-154639.png" height="60" />
+            <div class="company-div">
+              <h3 class="company-title">Innowise LLC<br/>
+                <span class="company-subtitle">Katy, TX</span></h3>
+            </div>
+          </div>
+        </mat-toolbar>
+        <mat-nav-list>
+          <div class="sidenav-main">
+            <div class="sidenav-title">MAIN MENU</div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/dash'}" [routerLink]="['dash']"><mat-icon [ngClass]="{'sidee1':href == '/home/dash'}">dashboard</mat-icon><span [ngClass]="{'sidee2':href == '/home/dash'}" class="sidenav-subtitle">Dashboard</span></div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/company'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/company'}">apps</mat-icon><span [ngClass]="{'sidee2':href == '/home/company'}" class="sidenav-subtitle">Company</span></div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/customer'}" [routerLink]="['customer']"><mat-icon [ngClass]="{'sidee1':href == '/home/customer'}">security</mat-icon><span [ngClass]="{'sidee2':href == '/home/customer'}" class="sidenav-subtitle">Customer</span></div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/reports'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/reports'}">assignment</mat-icon><span [ngClass]="{'sidee2':href == '/home/reports'}" class="sidenav-subtitle">Reports</span></div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/commission'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/commission'}">supervised_user_circle</mat-icon><span [ngClass]="{'sidee2':href == '/home/commission'}" class="sidenav-subtitle">Commision</span></div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/vendor'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/vendor'}">work</mat-icon><span [ngClass]="{'sidee2':href == '/home/vendor'}" class="sidenav-subtitle">Vendor</span></div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/proposals'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/proposals'}"> message</mat-icon><span [ngClass]="{'sidee2':href == '/home/proposals'}" class="sidenav-subtitle">Proposals</span></div>
+  
+            <div class="sidenav-title" style="padding-top: 10px;">WORKFLOWS</div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/leads'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/leads'}">burst_mode</mat-icon><span [ngClass]="{'sidee2':href == '/home/leads'}" class="sidenav-subtitle">Leads</span></div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/workflows'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/workflows'}">devices</mat-icon><span [ngClass]="{'sidee2':href == '/home/workflows'}" class="sidenav-subtitle">Workflows</span></div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/mytasks'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/mytasks'}">list_alt</mat-icon><span [ngClass]="{'sidee2':href == '/home/mytasks'}" class="sidenav-subtitle">My Tasks</span></div>
+  
+            <div class="sidenav-title" style="padding-top: 10px;">GENERAL</div>
+            <div class="sideee" (click)="val1()" [ngClass]="{'sidee':href == '/home/settings'}" [routerLink]="['']"><mat-icon [ngClass]="{'sidee1':href == '/home/settings'}">settings</mat-icon><span [ngClass]="{'sidee2':href == '/home/settings'}" class="sidenav-subtitle">Settings</span></div>
+        </div>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+  
+        <div id="fadeshow">
+         <mat-toolbar  class="navbar" style="background-color:white;">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            *ngIf="isHandset$ | async">
+           <mat-icon aria-label="Side nav toggle icon" style="height:80px;">menu</mat-icon>
+          </button>
+          <span></span>
+        </mat-toolbar> 
+  </div>
+      <mat-card-content>
+             <div>
+              <router-outlet></router-outlet>
+             </div>
+      </mat-card-content>
+  
+      </mat-sidenav-content>
+  </mat-sidenav-container> 
+    
+  </div>
+  
+  
+  

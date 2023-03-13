@@ -1,0 +1,25 @@
+.search{
+  height:3vh; 
+  width:30vw; 
+  border-radius: 5px; 
+  margin-right: 20px;
+}
+
+.mat-mdc-form-field-icon-prefix>.mat-icon, .mat-mdc-form-field-icon-suffix>.mat-icon{
+  padding-top: 0!important;
+  margin-top: -1vh!important;
+}
+
+.mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input, .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control{
+  padding-top: 3px!important;
+  margin-left: -1vh!important;
+}
+
+@media only screen and (min-width: 2000px)and (max-width:4200px) {
+  .search{
+    height:1vh; 
+    width:15vw; 
+    border-radius: 5px; 
+    margin-right: 20px;
+  } 
+}
